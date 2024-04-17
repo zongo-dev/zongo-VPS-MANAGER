@@ -16,7 +16,7 @@ fun_menu() {
     [[ "${message_from_id[$id]}" == "$id_admin" ]] && {
         local env_msg
         env_msg="<b>◈──────────────────◈</b>\n"
-        env_msg+="<b>🐉 WOLF VPS MANAGER BOT 🐉</b>\n"
+        env_msg+="<b>👻🥷 zongo VPS MANAGER BOT 👻🥷</b>\n"
         env_msg+="<b>◈──────────────────◈</b>\n\n"
         env_msg+="⚠️ <i>SELECT AN OPTION BELOW!</i>\n\n"
 	ShellBot.sendMessage --chat_id ${message_chat_id[$id]} --text "$env_msg" \
@@ -32,7 +32,7 @@ fun_menu() {
     if [[ "$(grep -w "${message_from_username}" $ativos | grep -wc 'revenda')" != '0' ]]; then
         local env_msg
         env_msg="<b>◈──────────────────◈</b>\n"
-        env_msg+="<b>🐉 WOLF VPS MANAGER BOT 🐉</b>\n"
+        env_msg+="<b>👻🥷 zongo VPS MANAGER BOT 👻🥷</b>\n"
         env_msg+="<b>◈──────────────────◈</b>\n\n"
         env_msg+="⚠️ <i>SELECT AN OPTION BELOW!</i>\n\n"
 	ShellBot.sendMessage --chat_id ${message_chat_id[$id]} --text "$env_msg" \
@@ -42,7 +42,7 @@ fun_menu() {
     elif [[ "$(grep -w "${message_from_username}" $ativos | grep -wc 'subrevenda')" != '0' ]]; then
         local env_msg
         env_msg="<b>◈──────────────────◈</b>\n"
-        env_msg+="<b>🐉 WOLF VPS MANAGER BOT 🐉</b>\n"
+        env_msg+="<b>👻🥷 zongo VPS MANAGER BOT 👻🥷</b>\n"
         env_msg+="<b>◈──────────────────◈</b>\n\n"
         env_msg+="⚠️ <i>SELECT AN OPTION BELOW!</i>\n\n"
 	ShellBot.sendMessage --chat_id ${message_chat_id[$id]} --text "$env_msg" \
@@ -67,7 +67,7 @@ fun_ajuda() {
     if [[ "$id_chatuser" = "$id_admin" ]]; then
         local env_msg
         env_msg="<b>◈──────────────────◈</b>\n"
-        env_msg+="<b>🐉 WOLF VPS MANAGER BOT 🐉</b>\n"
+        env_msg+="<b>👻🥷 zongo VPS MANAGER BOT 👻🥷</b>\n"
         env_msg+="<b>◈──────────────────◈</b>\n\n"
         env_msg+="⚠️ <b>Available Commands</b>\n\n"
         env_msg+="[<b>01</b>] /menu = Display menu\n"
@@ -96,7 +96,7 @@ fun_ajuda() {
             --text "$(echo -e $env_msg)" \
             --parse_mode html
 	ShellBot.sendMessage --chat_id $id_chatuser \
-            --text "$(echo -e ✅ All Tutorials , Updates : @Helper_360)"
+            --text "$(echo -e ✅ All Tutorials , Updates : @zongoDev)"
         return 0
     elif [[ -d /etc/bot/suspensos/$id_name ]]; then
         ShellBot.sendMessage --chat_id $id_chatuser \
@@ -107,7 +107,7 @@ fun_ajuda() {
     elif [[ "$(grep -w "$id_name" $ativos | awk '{print $NF}')" == 'revenda' ]]; then
         local env_msg
         env_msg="<b>◈──────────────────◈</b>\n"
-        env_msg+="<b>🐉 WOLF VPS MANAGER BOT 🐉</b>\n"
+        env_msg+="<b>👻🥷 zongo VPS MANAGER BOT 👻🥷</b>\n"
         env_msg+="<b>◈──────────────────◈</b>\n\n"
         env_msg+="⚠️ <b>Available Commands</b>\n\n"
         env_msg+="[<b>01</b>] /menu = Display menu\n"
@@ -130,12 +130,12 @@ fun_ajuda() {
             --text "$(echo -e $env_msg)" \
             --parse_mode html
 	ShellBot.sendMessage --chat_id $id_chatuser \
-            --text "$(echo -e ✅ All Tutorials , Updates : @DRAGON_VPS_MANAGER)"
+            --text "$(echo -e ✅ All Tutorials , Updates : @nkati_nkwan)"
         return 0
     elif [[ "$(grep -w "$id_name" $ativos | awk '{print $NF}')" == 'subrevenda' ]]; then
         local env_msg
         env_msg="<b>◈──────────────────◈</b>\n"
-        env_msg+="<b>🐉 WOLF VPS MANAGER BOT 🐉</b>\n"
+        env_msg+="<b>👻🥷 zongo VPS MANAGER BOT👻🥷</b>\n"
         env_msg+="<b>◈──────────────────◈</b>\n\n"
         env_msg+="⚠️ <b>Available Commands</b>\n\n"
         env_msg+="[<b>01</b>] /menu = display menu\n"
@@ -156,7 +156,7 @@ fun_ajuda() {
             --text "$(echo -e $env_msg)" \
             --parse_mode html
 	ShellBot.sendMessage --chat_id $id_chatuser \
-            --text "✅ All Tutorials , Updates : @DRAGON_VPS_MANAGER"
+            --text "✅ All Tutorials , Updates : @nkati_nkwan"
         return 0
     else
         ShellBot.sendMessage --chat_id $id_chatuser \
@@ -794,7 +794,7 @@ fun_download() {
     echo $_file2
     ShellBot.sendDocument --chat_id ${message_from_id[$id]} \
         --document "@/etc/bot/arquivos/$_file" \
-        --caption "$(echo -e "<b>=====================================</b>\n<b>               🐉 DRAGON VPS MANAGER 🐉   </b>\n<b>=====================================</b>\n\n<b>◈─────⪧ IMPORTANT ⪦──────◈</b>\n\n◈⪧ 🚫 NO SPAM\n◈⪧ ⚠️ NO DDOS\n◈⪧ 🎭 NO Hacking\n◈⪧ ⛔️ NO Carding\n◈⪧ 🙅‍♂️ NO Torrent\n◈⪧ ❌ NO MultiLogin\n◈⪧ 🤷‍♂️ NO Illegal Activities\n\n<b>◈─────⪧ SSH ACCOUNT ⪦─────◈</b>\n\n<b>◈ Username    :⪧</b>  <code>$(awk -F " " '/Nome/ {print $2}' $_file2)</code>\n<b>◈ Password     :⪧</b>  <code>$(awk -F " " '/Senha/ {print $2}' $_file2)</code>\n<b>◈ Login Limit   :⪧</b> $(awk -F " " '/Limite/ {print $2}' $_file2)\n<b>◈ Expire Date  :⪧</b> $(awk -F " " '/Validade/ {print $2}' $_file2)\n\n<b>◈──────⪧ PORTS ⪦ ───────◈</b>\n\n◈ SSH            ⌁   22\n◈ SSL             ⌁  443\n◈ Squid         ⌁  8080\n◈ DropBear ⌁  80\n◈ BadVPN    ⌁  7300\n\n<b>◈───⪧ONLINE USER COUNT⪦────◈ </b>\n\nhttp://$(cat /etc/IP):8888/server/online\n\n<b>◈──────────────────◈</b>\n\n<b>©️ 🐉  DRAGON VPS MANAGER SCRIPT  🐉</b>\n<b>◈──────────────────◈</b>")" \
+        --caption "$(echo -e "<b>=====================================</b>\n<b>               👻🥷 zongo VPS MANAGER 👻🥷   </b>\n<b>=====================================</b>\n\n<b>◈─────⪧ IMPORTANT ⪦──────◈</b>\n\n◈⪧ 🚫 NO SPAM\n◈⪧ ⚠️ NO DDOS\n◈⪧ 🎭 NO Hacking\n◈⪧ ⛔️ NO Carding\n◈⪧ 🙅‍♂️ NO Torrent\n◈⪧ ❌ NO MultiLogin\n◈⪧ 🤷‍♂️ NO Illegal Activities\n\n<b>◈─────⪧ SSH ACCOUNT ⪦─────◈</b>\n\n<b>◈ Username    :⪧</b>  <code>$(awk -F " " '/Nome/ {print $2}' $_file2)</code>\n<b>◈ Password     :⪧</b>  <code>$(awk -F " " '/Senha/ {print $2}' $_file2)</code>\n<b>◈ Login Limit   :⪧</b> $(awk -F " " '/Limite/ {print $2}' $_file2)\n<b>◈ Expire Date  :⪧</b> $(awk -F " " '/Validade/ {print $2}' $_file2)\n\n<b>◈──────⪧ PORTS ⪦ ───────◈</b>\n\n◈ SSH            ⌁   22\n◈ SSL             ⌁  443\n◈ Squid         ⌁  8080\n◈ DropBear ⌁  80\n◈ BadVPN    ⌁  7300\n\n<b>◈───⪧ONLINE USER COUNT⪦────◈ </b>\n\nhttp://$(cat /etc/IP):8888/server/online\n\n<b>◈──────────────────◈</b>\n\n<b>©️ 👻🥷 zongo VPS MANAGER SCRIPT 👻🥷</b>\n<b>◈──────────────────◈</b>")" \
         --parse_mode html
     [[ -e "/root/$(awk -F " " '/Nome/ {print $2}' $_file2).ovpn" ]] && {
         ShellBot.sendDocument --chat_id ${message_from_id[$id]} \
@@ -888,10 +888,10 @@ backup_users() {
 sobremim() {
     local msg
     msg="◈──────────────────◈\n"
-    msg+="<b>🐉 DRAGON VPS MANAGER 🐉</b>\n"
+    msg+="<b>👻🥷 zongo VPS MANAGER 👻🥷</b>\n"
     msg+="◈──────────────────◈\n\n"
-    msg+="<b>Developed by:</b> @Dragon_vps_manager\n"
-    msg+="<b>Official channel:</b> @Dragon_vps_manager\n\n"
+    msg+="<b>Developed by:</b> @nkati_nkwan\n"
+    msg+="<b>Updated by:</b> @nkati_nkwan\n"
     msg+="I was created with the purpose of providing information and tools for VPN management on 🐧 GNU/Linux 🐧 servers.\n\n"
     msg+="<b>Menu:</b> /menu\n"
     ShellBot.sendMessage --chat_id ${message_chat_id[$id]} \
@@ -971,13 +971,13 @@ fun_teste() {
         for arqv in $(ls /etc/bot/arquivos); do
             ShellBot.sendDocument --chat_id ${message_from_id[$id]} \
                 --document "@/etc/bot/arquivos/$arqv" \
-                --caption "$(echo -e "<b>====================================</b>\n<b>               🐉 DRAGON VPS MANAGER 🐉   </b>\n<b>====================================</b>\n\n<b>◈─────⪧ IMPORTANT ⪦──────◈</b>\n\n◈⪧ 🚫 NO SPAM\n◈⪧ ⚠️ NO DDOS\n◈⪧ 🎭 NO Hacking\n◈⪧ ⛔️ NO Carding\n◈⪧ 🙅‍♂️ NO Torrent\n◈⪧ ❌ NO MultiLogin\n◈⪧ 🤷‍♂️ NO Illegal Activities\n\n<b>◈─────⪧TEST SSH ACCOUNT ⪦─────◈</b>\n\n<b>◈ Username    :⪧</b>  <code>$usuario</code>\n<b>◈ Password     :⪧</b> <code>1234</code>\n<b>◈ Expire at  :⪧</b> $t_time $hrs / Hours \n\n<b>◈──────⪧ PORTS ⪦ ───────◈</b>\n\n◈ SSH            ⌁   22\n◈ SSL             ⌁  443\n◈ Squid         ⌁  8080\n◈ DropBear ⌁  80\n◈ BadVPN    ⌁  7300\n\n<b>◈───⪧ONLINE USER COUNT⪦────◈ </b>\n\nhttp://$(cat /etc/IP):8888/server/online\n\n<b>◈──────────────────◈</b>\n\n<b>©️ 🐉  DRAGON VPS MANAGER SCRIPT  🐉</b>\n<b>◈──────────────────◈</b>")" \
+                --caption "$(echo -e "<b>====================================</b>\n<b>               👻🥷 zongo VPS MANAGER 👻🥷   </b>\n<b>====================================</b>\n\n<b>◈─────⪧ IMPORTANT ⪦──────◈</b>\n\n◈⪧ 🚫 NO SPAM\n◈⪧ ⚠️ NO DDOS\n◈⪧ 🎭 NO Hacking\n◈⪧ ⛔️ NO Carding\n◈⪧ 🙅‍♂️ NO Torrent\n◈⪧ ❌ NO MultiLogin\n◈⪧ 🤷‍♂️ NO Illegal Activities\n\n<b>◈─────⪧TEST SSH ACCOUNT ⪦─────◈</b>\n\n<b>◈ Username    :⪧</b>  <code>$usuario</code>\n<b>◈ Password     :⪧</b> <code>1234</code>\n<b>◈ Expire at  :⪧</b> $t_time $hrs / Hours \n\n<b>◈──────⪧ PORTS ⪦ ───────◈</b>\n\n◈ SSH            ⌁   22\n◈ SSL             ⌁  443\n◈ Squid         ⌁  8080\n◈ DropBear ⌁  80\n◈ BadVPN    ⌁  7300\n\n<b>◈───⪧ONLINE USER COUNT⪦────◈ </b>\n\nhttp://$(cat /etc/IP):8888/server/online\n\n<b>◈──────────────────◈</b>\n\n<b>©️ 👻🥷 zongo VPS MANAGER SCRIPT 👻🥷</b>\n<b>◈──────────────────◈</b>")" \
                 --parse_mode html
         done
         return 0
     } || {
         ShellBot.sendMessage --chat_id ${message_chat_id[$id]} \
-            --text "$(echo -e "<b>====================================</b>\n<b>               🐉 DRAGON VPS MANAGER 🐉   </b>\n<b>====================================</b>\n\n<b>◈─────⪧ IMPORTANT ⪦──────◈</b>\n\n◈⪧ 🚫 NO SPAM\n◈⪧ ⚠️ NO DDOS\n◈⪧ 🎭 NO Hacking\n◈⪧ ⛔️ NO Carding\n◈⪧ 🙅‍♂️ NO Torrent\n◈⪧ ❌ NO MultiLogin\n◈⪧ 🤷‍♂️ NO Illegal Activities\n\n<b>◈────⪧TEST SSH ACCOUNT ⪦────◈</b>\n\n<b>◈ Host / IP       :⪧</b>  <code>$(cat /etc/IP)</code>\n<b>◈ Username    :⪧</b>  <code>$usuario</code>\n<b>◈ Password     :⪧</b> <code>1234</code>\n<b>◈ Expire at       :⪧</b> $t_time $hrs / Hours \n\n<b>◈──────⪧ PORTS ⪦ ───────◈</b>\n\n◈ SSH            ⌁   22\n◈ SSL             ⌁  443\n◈ Squid         ⌁  8080\n◈ DropBear ⌁  80\n◈ BadVPN    ⌁  7300\n\n<b>◈───⪧ONLINE USER COUNT⪦────◈ </b>\n\nhttp://$(cat /etc/IP):8888/server/online\n\n<b>◈──────────────────◈</b>\n\n<b>©️ 🐉  DRAGON VPS MANAGER SCRIPT  🐉</b>\n<b>◈──────────────────◈</b>")" \
+            --text "$(echo -e "<b>====================================</b>\n<b>               👻🥷 zongo VPS MANAGER 👻🥷   </b>\n<b>====================================</b>\n\n<b>◈─────⪧ IMPORTANT ⪦──────◈</b>\n\n◈⪧ 🚫 NO SPAM\n◈⪧ ⚠️ NO DDOS\n◈⪧ 🎭 NO Hacking\n◈⪧ ⛔️ NO Carding\n◈⪧ 🙅‍♂️ NO Torrent\n◈⪧ ❌ NO MultiLogin\n◈⪧ 🤷‍♂️ NO Illegal Activities\n\n<b>◈────⪧TEST SSH ACCOUNT ⪦────◈</b>\n\n<b>◈ Host / IP       :⪧</b>  <code>$(cat /etc/IP)</code>\n<b>◈ Username    :⪧</b>  <code>$usuario</code>\n<b>◈ Password     :⪧</b> <code>1234</code>\n<b>◈ Expire at       :⪧</b> $t_time $hrs / Hours \n\n<b>◈──────⪧ PORTS ⪦ ───────◈</b>\n\n◈ SSH            ⌁   22\n◈ SSL             ⌁  443\n◈ Squid         ⌁  8080\n◈ DropBear ⌁  80\n◈ BadVPN    ⌁  7300\n\n<b>◈───⪧ONLINE USER COUNT⪦────◈ </b>\n\nhttp://$(cat /etc/IP):8888/server/online\n\n<b>◈──────────────────◈</b>\n\n<b>©️ 👻🥷 zongo VPS MANAGER SCRIPT 👻🥷</b>\n<b>◈──────────────────◈</b>")" \
             --parse_mode html
         return 0
     }
@@ -1262,9 +1262,9 @@ restaure_backup() {
 msg_bem_vindo() {
     local msg
     msg="👋 Hello ${message_from_first_name[$id]} ! \n\n🤝 Welcome to\n"
-    msg+="<b>====================================</b>\n<b>               🐉 DRAGON VPS MANAGER 🐉   </b>\n<b>====================================</b>\n\n"
+    msg+="<b>====================================</b>\n<b>               👻🥷 zongo VPS MANAGER 👻🥷   </b>\n<b>====================================</b>\n\n"
     msg+="<b>To access the menu</b>\n<b>click [ /menu ]</b>\n\n"
-    msg+="<b>For information</b>\n<b>click [ /help ]</b>\n\n ✅ All Tutorials , Updates : @DRAGON_VPS_MANAGER"
+    msg+="<b>For information</b>\n<b>click [ /help ]</b>\n\n ✅ All Tutorials , Updates : @nkati_nkwan"
     ShellBot.sendMessage --chat_id ${message_chat_id[$id]} \
         --text "$(echo -e $msg)" \
         --parse_mode html
@@ -1359,7 +1359,7 @@ fun_del_rev() {
     }
     [[ "${callback_query_from_id[$id]}" == "$id_admin" ]] || [[ "$(grep -wc ${callback_query_from_username} $ativos)" != '0' ]] && {
         ShellBot.sendMessage --chat_id ${callback_query_message_chat_id[$id]} \
-            --text "🗑 REMOVE DEALER 🗑\n\nInform his username [Ex: @Dragon_vps_manager]:" \
+            --text "🗑 REMOVE DEALER 🗑\n\nInform his username [Ex: @nkati_nkwan]:" \
             --reply_markup "$(ShellBot.ForceReply)"
     } || {
         ShellBot.answerCallbackQuery --callback_query_id ${callback_query_id[$id]} \
@@ -1477,7 +1477,7 @@ fun_lim_rev() {
     }
     [[ "${callback_query_from_id[$id]}" == "$id_admin" ]] || [[ "$(grep -wc ${callback_query_from_username} $ativos)" != '0' ]] && {
         ShellBot.sendMessage --chat_id ${callback_query_message_chat_id[$id]} \
-            --text "♾ CHANGE RESALE LIMIT ♾\n\nInform his username [Ex: @Dragon_vps_manager]:" \
+            --text "♾ CHANGE RESALE LIMIT ♾\n\nInform his username [Ex: @nkati_nkwan]:" \
             --reply_markup "$(ShellBot.ForceReply)"
     } || {
         ShellBot.answerCallbackQuery --callback_query_id ${callback_query_id[$id]} \
@@ -1523,7 +1523,7 @@ fun_dat_rev() {
     }
     [[ "${callback_query_from_id[$id]}" == "$id_admin" ]] || [[ "$(grep -wc ${callback_query_from_username} $ativos)" != '0' ]] && {
         ShellBot.sendMessage --chat_id ${callback_query_message_chat_id[$id]} \
-            --text "📆 CHANGE RESALE DATE 📆\n\nInform his username [Ex: @Dragon_vps_manager]:" \
+            --text "📆 CHANGE RESALE DATE 📆\n\nInform his username [Ex: @nkati_nkwan]:" \
             --reply_markup "$(ShellBot.ForceReply)"
     } || {
         ShellBot.answerCallbackQuery --callback_query_id ${callback_query_id[$id]} \
@@ -1635,7 +1635,7 @@ fun_susp_rev() {
     }
     [[ "${callback_query_from_id[$id]}" == "$id_admin" ]] || [[ "$(grep -wc ${callback_query_from_username} $ativos)" != '0' ]] && {
         ShellBot.sendMessage --chat_id ${callback_query_message_chat_id[$id]} \
-            --text "🔒 SUSPEND DEALER 🔒\n\nInform his username [Ex: @Dragon_vps_manager]:" \
+            --text "🔒 SUSPEND DEALER 🔒\n\nInform his username [Ex: @nkati_nkwan]:" \
             --reply_markup "$(ShellBot.ForceReply)"
     } || {
         ShellBot.answerCallbackQuery --callback_query_id ${callback_query_id[$id]} \
@@ -2007,7 +2007,7 @@ while :; do
                             --reply_markup "$(ShellBot.ForceReply)"
                     } || {
                         ShellBot.sendMessage --chat_id ${message_from_id[$id]} \
-                            --text "<b>====================================</b>\n<b>               🐉 DRAGON VPS MANAGER 🐉   </b>\n<b>====================================</b>\n\n<b>◈─────⪧ IMPORTANT ⪦──────◈</b>\n\n◈⪧ 🚫 NO SPAM\n◈⪧ ⚠️ NO DDOS\n◈⪧ 🎭 NO Hacking\n◈⪧ ⛔️ NO Carding\n◈⪧ 🙅‍♂️ NO Torrent\n◈⪧ ❌ NO MultiLogin\n◈⪧ 🤷‍♂️ NO Illegal Activities\n\n<b>◈─────⪧ SSH ACCOUNT ⪦─────◈</b>\n\n<b>◈ Host / IP       :⪧</b>  <code>$(cat /etc/IP)</code>\n<b>◈ Username    :⪧</b>  <code>$(awk -F " " '/Nome/ {print $2}' $CAD_ARQ)</code>\n<b>◈ Password     :⪧</b>  <code>$(awk -F " " '/Senha/ {print $2}' $CAD_ARQ)</code>\n<b>◈ Login Limit   :⪧</b> $(awk -F " " '/Limite/ {print $2}' $CAD_ARQ)\n<b>◈ Expire Date  :⪧</b> $(awk -F " " '/Validade/ {print $2}' $CAD_ARQ)\n\n<b>◈──────⪧ PORTS ⪦ ───────◈</b>\n\n◈ SSH            ⌁   22\n◈ SSL             ⌁  443\n◈ Squid         ⌁  8080\n◈ DropBear ⌁  80\n◈ BadVPN    ⌁  7300\n\n<b>◈───⪧ONLINE USER COUNT⪦────◈ </b>\n\nhttp://$(cat /etc/IP):8888/server/online\n\n<b>◈──────────────────◈</b>\n\n<b>©️ 🐉  DRAGON VPS MANAGER SCRIPT  🐉</b>\n<b>◈──────────────────◈</b>" \
+                            --text "<b>====================================</b>\n<b>               👻🥷 zongo VPS MANAGER 👻🥷   </b>\n<b>====================================</b>\n\n<b>◈─────⪧ IMPORTANT ⪦──────◈</b>\n\n◈⪧ 🚫 NO SPAM\n◈⪧ ⚠️ NO DDOS\n◈⪧ 🎭 NO Hacking\n◈⪧ ⛔️ NO Carding\n◈⪧ 🙅‍♂️ NO Torrent\n◈⪧ ❌ NO MultiLogin\n◈⪧ 🤷‍♂️ NO Illegal Activities\n\n<b>◈─────⪧ SSH ACCOUNT ⪦─────◈</b>\n\n<b>◈ Host / IP       :⪧</b>  <code>$(cat /etc/IP)</code>\n<b>◈ Username    :⪧</b>  <code>$(awk -F " " '/Nome/ {print $2}' $CAD_ARQ)</code>\n<b>◈ Password     :⪧</b>  <code>$(awk -F " " '/Senha/ {print $2}' $CAD_ARQ)</code>\n<b>◈ Login Limit   :⪧</b> $(awk -F " " '/Limite/ {print $2}' $CAD_ARQ)\n<b>◈ Expire Date  :⪧</b> $(awk -F " " '/Validade/ {print $2}' $CAD_ARQ)\n\n<b>◈──────⪧ PORTS ⪦ ───────◈</b>\n\n◈ SSH            ⌁   22\n◈ SSL             ⌁  443\n◈ Squid         ⌁  8080\n◈ DropBear ⌁  80\n◈ BadVPN    ⌁  7300\n\n<b>◈───⪧ONLINE USER COUNT⪦────◈ </b>\n\nhttp://$(cat /etc/IP):8888/server/online\n\n<b>◈──────────────────◈</b>\n\n<b>©️👻🥷  zongo VPS MANAGER SCRIPT  👻🥷</b>\n<b>◈──────────────────◈</b>" \
                             --parse_mode html
                         break
                     }
@@ -2020,7 +2020,7 @@ while :; do
                             --text "$(echo -e "❌ Invalid option ❌\n\n⚠️ use only letters [EX: Yes or No]")" \
                             --parse_mode html
                         ShellBot.sendMessage --chat_id ${message_from_id[$id]} \
-                            --text "<b>====================================</b>\n<b>               🐉 DRAGON VPS MANAGER 🐉   </b>\n<b>====================================</b>\n\n<b>◈─────⪧ IMPORTANT ⪦──────◈</b>\n\n◈⪧ 🚫 NO SPAM\n◈⪧ ⚠️ NO DDOS\n◈⪧ 🎭 NO Hacking\n◈⪧ ⛔️ NO Carding\n◈⪧ 🙅‍♂️ NO Torrent\n◈⪧ ❌ NO MultiLogin\n◈⪧ 🤷‍♂️ NO Illegal Activities\n\n<b>◈─────⪧ SSH ACCOUNT ⪦─────◈</b>\n\n<b>◈ Host / IP       :⪧</b>  <code>$(cat /etc/IP)</code>\n<b>◈ Username    :⪧</b>  <code>$(awk -F " " '/Nome/ {print $2}' $CAD_ARQ)</code>\n<b>◈ Password     :⪧</b>  <code>$(awk -F " " '/Senha/ {print $2}' $CAD_ARQ)</code>\n<b>◈ Login Limit   :⪧</b> $(awk -F " " '/Limite/ {print $2}' $CAD_ARQ)\n<b>◈ Expire Date  :⪧</b> $(awk -F " " '/Validade/ {print $2}' $CAD_ARQ)\n\n<b>◈──────⪧ PORTS ⪦ ───────◈</b>\n\n◈ SSH            ⌁   22\n◈ SSL             ⌁  443\n◈ Squid         ⌁  8080\n◈ DropBear ⌁  80\n◈ BadVPN    ⌁  7300\n\n<b>◈───⪧ONLINE USER COUNT⪦────◈ </b>\n\nhttp://$(cat /etc/IP):8888/server/online\n\n<b>◈──────────────────◈</b>\n\n<b>©️ 🐉  DRAGON VPS MANAGER SCRIPT  🐉</b>\n<b>◈──────────────────◈</b>" \
+                            --text "<b>====================================</b>\n<b>               👻🥷 zongo VPS MANAGER 👻🥷   </b>\n<b>====================================</b>\n\n<b>◈─────⪧ IMPORTANT ⪦──────◈</b>\n\n◈⪧ 🚫 NO SPAM\n◈⪧ ⚠️ NO DDOS\n◈⪧ 🎭 NO Hacking\n◈⪧ ⛔️ NO Carding\n◈⪧ 🙅‍♂️ NO Torrent\n◈⪧ ❌ NO MultiLogin\n◈⪧ 🤷‍♂️ NO Illegal Activities\n\n<b>◈─────⪧ SSH ACCOUNT ⪦─────◈</b>\n\n<b>◈ Host / IP       :⪧</b>  <code>$(cat /etc/IP)</code>\n<b>◈ Username    :⪧</b>  <code>$(awk -F " " '/Nome/ {print $2}' $CAD_ARQ)</code>\n<b>◈ Password     :⪧</b>  <code>$(awk -F " " '/Senha/ {print $2}' $CAD_ARQ)</code>\n<b>◈ Login Limit   :⪧</b> $(awk -F " " '/Limite/ {print $2}' $CAD_ARQ)\n<b>◈ Expire Date  :⪧</b> $(awk -F " " '/Validade/ {print $2}' $CAD_ARQ)\n\n<b>◈──────⪧ PORTS ⪦ ───────◈</b>\n\n◈ SSH            ⌁   22\n◈ SSL             ⌁  443\n◈ Squid         ⌁  8080\n◈ DropBear ⌁  80\n◈ BadVPN    ⌁  7300\n\n<b>◈───⪧ONLINE USER COUNT⪦────◈ </b>\n\nhttp://$(cat /etc/IP):8888/server/online\n\n<b>◈──────────────────◈</b>\n\n<b>©️ 👻🥷 zongo VPS MANAGER SCRIPT👻🥷</b>\n<b>◈──────────────────◈</b>" \
                             --parse_mode html
                         break
                     }
@@ -2040,7 +2040,7 @@ while :; do
                             --reply_markup "$(ShellBot.ForceReply)"
                     } || {
                         ShellBot.sendMessage --chat_id ${message_from_id[$id]} \
-                            --text "<b>====================================</b>\n<b>               🐉 DRAGON VPS MANAGER 🐉   </b>\n<b>====================================</b>\n\n<b>◈─────⪧ IMPORTANT ⪦──────◈</b>\n\n◈⪧ 🚫 NO SPAM\n◈⪧ ⚠️ NO DDOS\n◈⪧ 🎭 NO Hacking\n◈⪧ ⛔️ NO Carding\n◈⪧ 🙅‍♂️ NO Torrent\n◈⪧ ❌ NO MultiLogin\n◈⪧ 🤷‍♂️ NO Illegal Activities\n\n<b>◈─────⪧ SSH ACCOUNT ⪦─────◈</b>\n\n<b>◈ Host / IP       :⪧  <code>$(cat /etc/IP)</code>\n<b>◈ Username    :⪧</b>  <code>$(awk -F " " '/Nome/ {print $2}' $CAD_ARQ)</code>\n<b>◈ Password     :⪧</b>  <code>$(awk -F " " '/Senha/ {print $2}' $CAD_ARQ)</code>\n<b>◈ Login Limit   :⪧</b> $(awk -F " " '/Limite/ {print $2}' $CAD_ARQ)\n<b>◈ Expire Date  :⪧</b> $(awk -F " " '/Validade/ {print $2}' $CAD_ARQ)\n\n<b>◈──────⪧ PORTS ⪦ ───────◈</b>\n\n◈ SSH            ⌁   22\n◈ SSL             ⌁  443\n◈ Squid         ⌁  8080\n◈ DropBear ⌁  80\n◈ BadVPN    ⌁  7300\n\n<b>◈───⪧ONLINE USER COUNT⪦────◈ </b>\n\nhttp://$(cat /etc/IP):8888/server/online\n\n<b>◈──────────────────◈</b>\n\n<b>©️ 🐉  DRAGON VPS MANAGER SCRIPT  🐉</b>\n<b>◈──────────────────◈</b>" \
+                            --text "<b>====================================</b>\n<b>               👻🥷 zongo VPS MANAGER 👻🥷   </b>\n<b>====================================</b>\n\n<b>◈─────⪧ IMPORTANT ⪦──────◈</b>\n\n◈⪧ 🚫 NO SPAM\n◈⪧ ⚠️ NO DDOS\n◈⪧ 🎭 NO Hacking\n◈⪧ ⛔️ NO Carding\n◈⪧ 🙅‍♂️ NO Torrent\n◈⪧ ❌ NO MultiLogin\n◈⪧ 🤷‍♂️ NO Illegal Activities\n\n<b>◈─────⪧ SSH ACCOUNT ⪦─────◈</b>\n\n<b>◈ Host / IP       :⪧  <code>$(cat /etc/IP)</code>\n<b>◈ Username    :⪧</b>  <code>$(awk -F " " '/Nome/ {print $2}' $CAD_ARQ)</code>\n<b>◈ Password     :⪧</b>  <code>$(awk -F " " '/Senha/ {print $2}' $CAD_ARQ)</code>\n<b>◈ Login Limit   :⪧</b> $(awk -F " " '/Limite/ {print $2}' $CAD_ARQ)\n<b>◈ Expire Date  :⪧</b> $(awk -F " " '/Validade/ {print $2}' $CAD_ARQ)\n\n<b>◈──────⪧ PORTS ⪦ ───────◈</b>\n\n◈ SSH            ⌁   22\n◈ SSL             ⌁  443\n◈ Squid         ⌁  8080\n◈ DropBear ⌁  80\n◈ BadVPN    ⌁  7300\n\n<b>◈───⪧ONLINE USER COUNT⪦────◈ </b>\n\nhttp://$(cat /etc/IP):8888/server/online\n\n<b>◈──────────────────◈</b>\n\n<b>©️ 👻🥷 zongo VPS MANAGER SCRIPT🥷</b>\n<b>◈──────────────────◈</b>" \
                             --parse_mode html
                     }
                     ;;
@@ -2052,7 +2052,7 @@ while :; do
                             --text "$(echo -e "❌ Invalid option ❌ \n\n⚠️ use only numbers [EX: 1]")" \
                             --parse_mode html
                         ShellBot.sendMessage --chat_id ${message_from_id[$id]} \
-                            --text "<b>====================================</b>\n<b>               🐉 DRAGON VPS MANAGER 🐉   </b>\n<b>====================================</b>\n\n<b>◈─────⪧ IMPORTANT ⪦──────◈</b>\n\n◈⪧ 🚫 NO SPAM\n◈⪧ ⚠️ NO DDOS\n◈⪧ 🎭 NO Hacking\n◈⪧ ⛔️ NO Carding\n◈⪧ 🙅‍♂️ NO Torrent\n◈⪧ ❌ NO MultiLogin\n◈⪧ 🤷‍♂️ NO Illegal Activities\n\n<b>◈─────⪧ SSH ACCOUNT ⪦─────◈</b>\n\n<b>◈ Host / IP       :⪧  <code>$(cat /etc/IP)</code>\n<b>◈ Username    :⪧</b>  <code>$(awk -F " " '/Nome/ {print $2}' $CAD_ARQ)</code>\n<b>◈ Password     :⪧</b>  <code>$(awk -F " " '/Senha/ {print $2}' $CAD_ARQ)</code>\n<b>◈ Login Limit   :⪧</b> $(awk -F " " '/Limite/ {print $2}' $CAD_ARQ)\n<b>◈ Expire Date  :⪧</b> $(awk -F " " '/Validade/ {print $2}' $CAD_ARQ)\n\n<b>◈──────⪧ PORTS ⪦ ───────◈</b>\n\n◈ SSH            ⌁   22\n◈ SSL             ⌁  443\n◈ Squid         ⌁  8080\n◈ DropBear ⌁  80\n◈ BadVPN    ⌁  7300\n\n<b>◈───⪧ONLINE USER COUNT⪦────◈ </b>\n\nhttp://$(cat /etc/IP):8888/server/online\n\n<b>◈──────────────────◈</b>\n\n<b>©️ 🐉  DRAGON VPS MANAGER SCRIPT  🐉</b>\n<b>◈──────────────────◈</b>" \
+                            --text "<b>====================================</b>\n<b>               👻🥷 zongo VPS MANAGER 👻🥷   </b>\n<b>====================================</b>\n\n<b>◈─────⪧ IMPORTANT ⪦──────◈</b>\n\n◈⪧ 🚫 NO SPAM\n◈⪧ ⚠️ NO DDOS\n◈⪧ 🎭 NO Hacking\n◈⪧ ⛔️ NO Carding\n◈⪧ 🙅‍♂️ NO Torrent\n◈⪧ ❌ NO MultiLogin\n◈⪧ 🤷‍♂️ NO Illegal Activities\n\n<b>◈─────⪧ SSH ACCOUNT ⪦─────◈</b>\n\n<b>◈ Host / IP       :⪧  <code>$(cat /etc/IP)</code>\n<b>◈ Username    :⪧</b>  <code>$(awk -F " " '/Nome/ {print $2}' $CAD_ARQ)</code>\n<b>◈ Password     :⪧</b>  <code>$(awk -F " " '/Senha/ {print $2}' $CAD_ARQ)</code>\n<b>◈ Login Limit   :⪧</b> $(awk -F " " '/Limite/ {print $2}' $CAD_ARQ)\n<b>◈ Expire Date  :⪧</b> $(awk -F " " '/Validade/ {print $2}' $CAD_ARQ)\n\n<b>◈──────⪧ PORTS ⪦ ───────◈</b>\n\n◈ SSH            ⌁   22\n◈ SSL             ⌁  443\n◈ Squid         ⌁  8080\n◈ DropBear ⌁  80\n◈ BadVPN    ⌁  7300\n\n<b>◈───⪧ONLINE USER COUNT⪦────◈ </b>\n\nhttp://$(cat /etc/IP):8888/server/online\n\n<b>◈──────────────────◈</b>\n\n<b>©️ 👻🥷 zongo VPS MANAGER SCRIPT 👻🥷</b>\n<b>◈──────────────────◈</b>" \
                             --parse_mode html
                         >$CAD_ARQ
                         break
@@ -2287,16 +2287,16 @@ while :; do
                     [[ "$_erro" == '1' ]] && break
                     echo "Nome: ${message_text[$id]}" >$CAD_ARQ
                     ShellBot.sendMessage --chat_id ${message_from_id[$id]} \
-                        --text 'Inform his username [Ex: @Dragon_vps_manager]:' \
+                        --text 'Inform his username [Ex: @nkati_nkwan]:' \
                         --reply_markup "$(ShellBot.ForceReply)"
                     ;;
-                'Inform his username [Ex: @Dragon_vps_manager]:')
+                'Inform his username [Ex: @nkati_nkwan]:')
                     verifica_acesso
                     [[ "$_erro" == '1' ]] && break
                     _VAR1=$(echo -e ${message_text[$id]} | awk -F '@' {'print $2'})
                     [[ -z $_VAR1 ]] && {
                         ShellBot.sendMessage --chat_id ${message_chat_id[$id]} \
-                            --text "$(echo -e "❌ Error \n\n⚠️ inform the username [EX: @Dragon_vps_manager]")" \
+                            --text "$(echo -e "❌ Error \n\n⚠️ inform the username [EX: @nkati_nkwan]")" \
                             --parse_mode html
                         break
                     }
@@ -2348,7 +2348,7 @@ while :; do
                         --parse_mode html
                     ;;
                     # REMOVE REVENDEDOR
-                '🗑 REMOVE DEALER 🗑\n\nInform his username [Ex: @Dragon_vps_manager]:')
+                '🗑 REMOVE DEALER 🗑\n\nInform his username [Ex: @nkati_nkwan]:')
                     echo -e "${message_text[$id]}" >$CAD_ARQ
                     _Var=$(sed -n '1 p' $CAD_ARQ | awk -F '@' {'print $2'})
                     [[ -z $_Var ]] && {
@@ -2361,7 +2361,7 @@ while :; do
                     break
                     ;;
                     # ALTERAR LIMITE
-                '♾ CHANGE RESALE LIMIT ♾\n\nInform his username [Ex: @Dragon_vps_manager]:')
+                '♾ CHANGE RESALE LIMIT ♾\n\nInform his username [Ex: @nkati_nkwan]:')
                     verifica_acesso
                     [[ "$_erro" == '1' ]] && break
                     echo -e "Dealer: ${message_text[$id]}" >$CAD_ARQ
@@ -2438,7 +2438,7 @@ while :; do
                         --parse_mode html
                     # ALTERAR DATA
                     ;;
-                '📆 CHANGE RESALE DATE 📆\n\nInform his username [Ex: @Dragon_vps_manager]:')
+                '📆 CHANGE RESALE DATE 📆\n\nInform his username [Ex: @nkati_nkwan]:')
                     verifica_acesso
                     [[ "$_erro" == '1' ]] && break
                     _VAR1=$(echo -e ${message_text[$id]} | awk -F '@' {'print $2'})
@@ -2493,7 +2493,7 @@ while :; do
                         --parse_mode html
                     ;;
                     # SUSPENDER REVENDEDOR
-                '🔒 SUSPEND DEALER 🔒\n\nInform his username [Ex: @Dragon_vps_manager]:')
+                '🔒 SUSPEND DEALER 🔒\n\nInform his username [Ex: @nkati_nkwan]:')
                     _VAR1=$(echo -e ${message_text[$id]} | awk -F '@' {'print $2'})
                     [[ -z $_VAR1 ]] && {
                         ShellBot.sendMessage --chat_id ${message_chat_id[$id]} \
