@@ -346,7 +346,7 @@ echo "$username $sshlimiter" >>/root/usuarios.db
 		}
 		clear
     echo -e "\033[1;32m===================================="
-    echo -e "\033[1;32m   🌀WOLF VPS MANAGER🌀 " 
+    echo -e "\033[1;32m   👻🥷 zongo VPS MANAGER 👻🥷 " 
     echo -e "\033[1;32m===================================="
     echo ""
     echo -e "\033[1;37m◈─────⪧ SSH ACCOUNT ⪦─────◈"
@@ -359,7 +359,7 @@ echo "$username $sshlimiter" >>/root/usuarios.db
     echo -e "\033[1;32m◈ Expire Date :⪧  \033[1;31m$gui"
     echo ""
     echo -e "\033[1;37m◈─────────────────────────────────◈"
-    echo -e "\033[1;37m©️ 🌀WOLF VPS MANAGER🌀"
+    echo -e "\033[1;37m©️ 👻🥷 zongo VPS MANAGER 👻🥷"
     echo -e "\033[1;37m◈─────────────────────────────────◈"
 		sleep 1
 		function aguarde() {
@@ -396,7 +396,7 @@ echo "$username $sshlimiter" >>/root/usuarios.db
 	} || {
 		clear
     echo -e "\033[1;32m===================================="
-    echo -e "\033[1;32m   🌀WOLF VPS MANAGER🌀  " 
+    echo -e "\033[1;32m   👻🥷 zongo VPS MANAGER 👻🥷  " 
     echo -e "\033[1;32m===================================="
     echo ""
     echo -e "\033[1;37m◈─────⪧ SSH ACCOUNT ⪦─────◈"
@@ -409,13 +409,13 @@ echo "$username $sshlimiter" >>/root/usuarios.db
     echo -e "\033[1;32m◈ Expire Date :⪧  \033[1;31m$gui"
     echo ""
     echo -e "\033[1;37m◈─────────────────────────────────◈"
-    echo -e "\033[1;37m©️ 🌀 WOLF VPS MANAGER SCRIPT 🌀"
+    echo -e "\033[1;37m©️ 👻🥷 zongo VPS MANAGER SCRIPT 👻🥷"
     echo -e "\033[1;37m◈─────────────────────────────────◈"
 	}
 } || {
 	clear
     echo -e "\033[1;32m===================================="
-    echo -e "\033[1;32m   🌀WOLF VPS MANAGER🌀  " 
+    echo -e "\033[1;32m   👻🥷 zongo VPS MANAGER 👻🥷  " 
     echo -e "\033[1;32m===================================="
     echo ""
     echo -e "\033[1;37m◈────────⪧ SSH ACCOUNT ⪦────────────────◈"
@@ -438,6 +438,6 @@ echo "$username $sshlimiter" >>/root/usuarios.db
     echo -e "\033[1;37mGET http://91.241.94.160/ HTTP/1.1[crlf]Host: zerod.mobi[crlf]Connection: Upgrade[crlf]Upgrade: Websocket [crlf][crlf]"
     echo ""
     echo -e "\033[1;37m◈────────────────────────────────────────────◈"
-    echo -e "\033[1;37m©️ 🌀    WOLF VPS MANAGER      🌀"
+    echo -e "\033[1;37m©️ 👻🥷 zongo VPS MANAGER 👻🥷"
     echo -e "\033[1;37m◈────────────────────────────────────────────◈"
 }
