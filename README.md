@@ -1,4 +1,4 @@
-## ◇────── ZONGO VPS MANAGER ───────◇
+## ◇────── zongo VPS MANAGER ───────◇
 ___Update System Packages and Install SCRIPT___
 
 ```
